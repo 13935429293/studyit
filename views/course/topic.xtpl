@@ -1,0 +1,11 @@
+{{extend('../layout/main')}}
+{{#block('content')}}
+<div class="body course-topic">
+    <!-- 面包屑 -->
+    <ol class="breadcrumb">
+        <li><a href="javascript:;">课程管理</a></li>
+        <li class="active">课程专题</li>
+    </ol>
+    <h3>敬请期待...</h3>
+</div>
+{{/block}}

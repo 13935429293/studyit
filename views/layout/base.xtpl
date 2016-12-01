@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学IT - 后台管理系统</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/nprogress/nprogress.css">
+    <link rel="stylesheet" href="/less/index.css">
+</head>
+<body>
+
+{{{block('aside')}}}
+<!-- 主体 -->
+{{{block('main')}}}
+{{{block('modal')}}}
+{{{block('plain')}}}
+
+<script src="/lib/sea.js"></script>
+{{{block ("script")}}}
+<script>
+    seajs.config({
+        base: "/assets",
+        alias: {
+            jquery: "jquery/jquery.js"
+        }
+    })
+    seajs.use('/scripts/common');
+</script>
+</body>
+</html>
