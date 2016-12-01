@@ -18,12 +18,12 @@ define(function (require, exports, modules) {
     })
     $('.navs a').each(function () {
         var _this = $(this)
-        var href = _this.attr("href");
-       // console.log(href + "=========" + location.pathname);
-        pathname = location.pathname
-       // console.log(pathname,)
-        if (href !== location.pathname) {
-            return
+        var href = _this.attr("href").slice(1);
+
+        console.log(href + "=========" + location.pathname);
+
+        if (location.pathname.lastIndexOf(href) != 1) {
+            return;
         }
         _this.addClass("active");
         if(_this.parent().parent().hasClass("list-unstyled")){
